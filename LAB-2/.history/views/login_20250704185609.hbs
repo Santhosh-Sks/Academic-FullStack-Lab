@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Student Login</title>
+  </head>
+  <body>
+    <h1>Student Login</h1>
+    {{#if error}}
+      <p style="color:red">{{error}}</p>
+    {{/if}}
+    <form method="POST" action="/login">
+      <input type="text" name="student" placeholder="Enter your name or ID" required />
+      <button type="submit">Login</button>
+    </form>
+  </body>
+</html> 
