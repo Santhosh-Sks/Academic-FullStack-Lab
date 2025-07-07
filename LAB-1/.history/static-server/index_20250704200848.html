@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Login</title>
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>🎓 Student Login</h2>
+    <form id="loginForm">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="rollno">Roll Number:</label>
+      <input type="text" name="rollno" id="rollno" required />
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // prevent actual form submission
+      const email = document.getElementById('email').value;
+      const rollno = document.getElementById('rollno').value;
+
+      if (email && rollno) {
+        alert(" Registered Successfully!");
+        this.reset(); 
+      }
+    });
+  </script>
+</body>
+</html>

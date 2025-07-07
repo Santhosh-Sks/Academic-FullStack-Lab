@@ -1,0 +1,11 @@
+<h2>Add Course</h2>
+<p>Logged in as: {{student.email}} (Roll No: {{student.rollno}})</p>
+
+<form action="/add-course" method="POST">
+    <label>Course Name:</label><br>
+    <input type="text" name="coursename" required><br><br>
+
+    <button type="submit">Add Course</button>
+</form>
+
+<p><a href="/courses">View All Courses</a></p> 
