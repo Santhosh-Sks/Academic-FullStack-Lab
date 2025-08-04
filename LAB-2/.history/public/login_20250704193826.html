@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        body {
+            background: #f4f6fb;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-container {
+            background: #fff;
+            padding: 40px 32px 32px 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(42,82,152,0.12);
+            max-width: 350px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            color: #2a5298;
+            margin-bottom: 28px;
+            font-size: 2em;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        label {
+            color: #1e3c72;
+            font-weight: 500;
+            margin-bottom: 6px;
+            display: block;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border: 1px solid #b0c4de;
+            border-radius: 4px;
+            font-size: 1em;
+            background: #f8fafc;
+            transition: border 0.2s;
+        }
+        input[type="text"]:focus, input[type="email"]:focus {
+            border: 1.5px solid #2a5298;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            background: linear-gradient(90deg, #2a5298 0%, #1e3c72 100%);
+            color: #fff;
+            border: none;
+            padding: 12px 0;
+            border-radius: 4px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 8px;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Student Login</h2>
+        <form action="/login" method="POST">
+            <label>User Name:</label>
+            <input type="text" name="username" required>
+
+            <label>Email:</label>
+            <input type="email" name="email" required>
+
+            <label>Roll No:</label>
+            <input type="text" name="rollno" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html> 

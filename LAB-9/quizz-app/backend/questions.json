@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "Which language runs in a web browser?",
+    "options": ["Java", "C", "Python", "JavaScript"],
+    "answer": "JavaScript"
+  },
+  {
+    "id": 2,
+    "question": "What does CSS stand for?",
+    "options": ["Central Style Sheets", "Cascading Style Sheets", "Cascading Simple Sheets", "Cars SUVs Sailboats"],
+    "answer": "Cascading Style Sheets"
+  },
+  {
+    "id": 3,
+    "question": "What does HTTP stand for?",
+    "options": ["Hyper Text Transfer Protocol", "Hyper Transfer Text Protocol", "Hyperlink Transfer Text Protocol", "Hyperlink Text Transmission Protocol"],
+    "answer": "Hyper Text Transfer Protocol"
+  },
+  {
+    "id": 4,
+    "question": "Which company developed React.js?",
+    "options": ["Google", "Facebook", "Microsoft", "Twitter"],
+    "answer": "Facebook"
+  },
+  {
+    "id": 5,
+    "question": "Which of these is a NoSQL Database?",
+    "options": ["MySQL", "PostgreSQL", "MongoDB", "OracleDB"],
+    "answer": "MongoDB"
+  },
+{
+  "id": 6,
+  "question": "What is the main purpose of a web server?",
+  "options": ["To store files", "To serve web pages", "To run applications", "To manage databases"],
+  "answer": "To serve web pages"
+},
+{
+  "id": 7,
+  "question": "Which HTML tag is used to define an internal style sheet?",
+  "options": ["<style>", "<css>", "<script>", "<link>"],
+  "answer": "<style>"
+},
+{
+  "id": 8,
+  "question": "What is the correct HTML element for inserting a line break?",
+  "options": ["<break>", "<br>", "<lb>", "<line>"],
+  "answer": "<br>"
+},
+{
+  "id": 9,
+  "question": "Which of the following is not a JavaScript data type?",
+  "options": ["String", "Number", "Boolean", "Character"],
+  "answer": "Character"
+},
+{
+  "id": 10,
+  "question": "What does SQL stand for?",
+  "options": ["Structured Query Language", "Structured Question Language", "Simple Query Language", "Standard Query Language"],
+  "answer": "Structured Query Language"
+}
+]

@@ -1,0 +1,13 @@
+<h2>Course List</h2>
+
+{{#if courses.length}}
+    <ul>
+    {{#each courses}}
+        <li>{{this.name}} - Added by: {{this.student.username}} ({{this.student.email}})</li>
+    {{/each}}
+    </ul>
+{{else}}
+    <p>No courses added yet.</p>
+{{/if}}
+
+<p><a href="/add-course">Add Another Course</a></p> 

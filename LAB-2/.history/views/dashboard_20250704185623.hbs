@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Course Dashboard</title>
+  </head>
+  <body>
+    <h1>Welcome, {{student}}</h1>
+    <a href="/logout">Logout</a>
+    <h2>Add Course</h2>
+    <form method="POST" action="/add-course">
+      <input type="text" name="courseName" placeholder="Course Name" required />
+      <input type="text" name="courseDesc" placeholder="Course Description" />
+      <button type="submit">Add Course</button>
+    </form>
+    <h2>Your Courses</h2>
+    {{#if courses.length}}
+      <ul>
+        {{#each courses}}
+          <li><strong>{{this.name}}</strong>: {{this.desc}}</li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p>No courses added yet.</p>
+    {{/if}}
+  </body>
+</html> 

@@ -1,0 +1,66 @@
+<html ng-app="quizApp">
+<head>
+    <title>MCQ Quiz App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="quizController">
+
+    <h1>Online MCQ Quiz</h1>
+
+    <div ng-repeat="q in questions">
+        <h3>{{q.question}}</h3>
+        <div ng-repeat="opt in q.options">
+            <input type="radio" ng-model="q.userAnswer" name="q{{q.id}}" ng-value="opt"> {{opt}}
+        </div>
+    </div>
+
+    <button ng-click="submitAnswers()">Submit</button>
+
+    <div ng-if="results.length > 0">
+        <h2>Results:</h2>
+        <div ng-if="results.length === questions.length">
+    <h2>Your Score: {{score}} / 10</h2>
+</div>
+
+    </div>
+<script>
+    var app = angular.module('quizApp', []);
+    app.controller('quizController', function($scope, $http) {
+
+        $scope.questions = [];
+        $scope.results = [];
+        $scope.score = 0;
+
+        $http.get('http://localhost:3000/api/questions')
+        .then(function(response) {
+            $scope.questions = response.data;
+        });
+
+        $scope.submitAnswers = function() {
+            $scope.results = [];
+            $scope.score = 0;
+            let totalQuestions = $scope.questions.length;
+            let marksPerQuestion = 10 / totalQuestions;
+
+            $scope.questions.forEach(function(q) {
+                $http.post('http://localhost:3000/api/validate', {
+                    id: q.id,
+                    selectedAnswer: q.userAnswer
+                }).then(function(response) {
+                    $scope.results.push({
+                        id: q.id,
+                        correct: response.data.correct
+                    });
+
+                    if (response.data.correct) {
+                        $scope.score += marksPerQuestion;
+                    }
+                });
+            });
+        };
+    });
+</script>
+
+
+</body>
+</html>

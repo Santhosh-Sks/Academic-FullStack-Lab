@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="counterApp">
+<head>
+  <meta charset="UTF-8" />
+  <title>😊 Fun Counter App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="CounterController">
+  <div class="glass-container">
+    <h1>Counter 🎯</h1>
+
+    <div class="emoji" ng-class="reaction">
+      <span ng-if="reaction === 'happy'">😊</span>
+      <span ng-if="reaction === 'sad'">😢</span>
+      <span ng-if="reaction === ''">🤔</span>
+    </div>
+
+    <div class="counter-display bounce">
+      <button class="btn" ng-click="decrease()">➖</button>
+      <span class="count">{{ count }}</span>
+      <button class="btn" ng-click="increase()">➕</button>
+    </div>
+
+    <p class="tip">Try increasing/decreasing and see the mood change!</p>
+  </div>
+</body>
+</html>

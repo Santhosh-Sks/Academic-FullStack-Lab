@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login & Signup</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh;">
+
+    <div style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 300px;">
+
+        <h2 style="text-align: center; color: #333;">Signup</h2>
+        <form method="POST" action="/signup">
+            <label>Username:</label><br>
+            <input type="text" name="username" required style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;"><br>
+            <label>Password:</label><br>
+            <input type="password" name="password" required style="width: 100%; padding: 8px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;"><br>
+            <button type="submit" style="width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px;">Signup</button>
+        </form>
+
+        <hr style="margin: 20px 0;">
+
+        <h2 style="text-align: center; color: #333;">Login</h2>
+        <form method="POST" action="/login">
+            <label>Username:</label><br>
+            <input type="text" name="username" required style="width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;"><br>
+            <label>Password:</label><br>
+            <input type="password" name="password" required style="width: 100%; padding: 8px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;"><br>
+            <button type="submit" style="width: 100%; padding: 10px; background-color: #008CBA; color: white; border: none; border-radius: 5px;">Login</button>
+        </form>
+
+    </div>
+
+</body>
+</html>

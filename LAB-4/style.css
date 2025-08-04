@@ -1,0 +1,99 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.glass-container {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+  width: 360px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 1s ease-in;
+}
+
+h1 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 28px;
+}
+
+.counter-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.count {
+  font-size: 2.8rem;
+  color: #34495e;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(6px);
+  transition: transform 0.2s;
+}
+
+.btn {
+  background-color: #6c5ce7;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  font-size: 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #a29bfe;
+  transform: scale(1.1);
+}
+
+.emoji {
+  font-size: 3rem;
+  margin: 10px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.happy span {
+  animation: bounceEmoji 0.5s;
+}
+
+.sad span {
+  animation: shakeEmoji 0.5s;
+}
+
+.tip {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Animations */
+@keyframes bounceEmoji {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes shakeEmoji {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  75% { transform: rotate(15deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

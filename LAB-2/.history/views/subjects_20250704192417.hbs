@@ -1,0 +1,24 @@
+<h2>Current Semester Subjects</h2>
+<p>Logged in as: {{student.username}} ({{student.email}}, Roll No: {{student.rollno}})</p>
+<table style="margin: 24px auto; border-collapse: collapse; min-width: 400px;">
+  <tr style="background: #2a5298; color: #fff;">
+    <th style="padding: 10px;">Subject</th>
+    <th style="padding: 10px;">Attendance</th>
+    <th style="padding: 10px;">Action</th>
+  </tr>
+  {{#each subjects}}
+    <tr style="background: #fff;">
+      <td style="padding: 10px;">{{this}}</td>
+      <td style="padding: 10px; text-align: center;">
+        {{attendanceCount ../attendance this}} days
+      </td>
+      <td style="padding: 10px; text-align: center;">
+        <form action="/mark-attendance" method="POST" style="display:inline;">
+          <input type="hidden" name="subject" value="{{this}}">
+          <button type="submit">Mark Attendance</button>
+        </form>
+      </td>
+    </tr>
+  {{/each}}
+</table>
+<p style="text-align:center;"><a href="/logout">Logout</a></p> 
